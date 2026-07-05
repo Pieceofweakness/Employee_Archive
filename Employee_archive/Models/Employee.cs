@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employee_archive.Models
+namespace Employee_archive
 {
     public class Employee
     {
@@ -13,6 +13,7 @@ namespace Employee_archive.Models
         public string Born_date { get; set; }
         public string Phone { get; set; }
         public int Role { get; set; }
+        public string RoleName { get; set; }
         public int Work_days { get; set; }
     }
 }

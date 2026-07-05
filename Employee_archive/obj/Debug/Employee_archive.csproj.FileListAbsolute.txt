@@ -24,7 +24,6 @@ D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\bin\Debu
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\bin\Debug\System.ValueTuple.xml
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.csproj.AssemblyReference.cache
-D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Form1.resources
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Properties.Resources.resources
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.csproj.GenerateResource.cache
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.csproj.CoreCompileInputs.cache
@@ -32,3 +31,6 @@ D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debu
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.exe
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.pdb
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.exe.config
+D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.TestForm.resources
+D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Forms.LoginForm.resources
+D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Forms.MainForm.resources

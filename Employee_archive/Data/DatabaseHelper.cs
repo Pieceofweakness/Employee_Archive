@@ -18,7 +18,7 @@ namespace Employee_archive
             
         }
 
-
+        //Запросы и подключение
         private IDbConnection GetConnection()
         {
             return new NpgsqlConnection(connectionString);
@@ -71,6 +71,86 @@ namespace Employee_archive
 
 
 
+        //Авторизация
+        public Administrator Authenticate(string login, string password)
+        {
+            using(var conn = GetConnection())
+            {
+                conn.Open();
+                var admin = conn.QueryFirstOrDefault<Administrator>(
+                    "SELECT * FROM administrators WHERE Login = @login and Password = @password",
+                    new { login, password });
+
+                if (admin != null)
+                {
+                    return new Administrator
+                    {
+                        ID_Admin = admin.ID_Admin,
+                        Full_Name = admin.Full_Name
+                    };
+                }
+                return null;
+            }
+        }
+
+
+
+        //CRUD над работниками
+        public List<Employee> GetAllEmployees()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                string sql = @"SELECT e.*, r.Name_Role as RoleName
+                               FROM employees e
+                               left join Roles r ON e.Role = r.ID_Role";
+
+                return conn.Query<Employee>(sql).ToList();
+            }
+        }
+
+        public bool AddEmployee(Employee employee)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                string sql = @"
+                        INSERT INTO employees(Full_Name,Born_date,Phone,Role,Work_days) 
+                        VALUES (@Full_Name, @Dorn_date, @Phone, @Role, @Work_days)";
+                return conn.Execute(sql, employee) > 0;
+            }
+        }
+
+        public bool UpdateEmployee(Employee employee)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+                    UPDATE employees SET
+                        Full_Name = @Full_Name,
+	                    Born_date = @Born_date,
+	                    Phone = @Phone,
+	                    Role = @Role,
+	                    Work_days = @Work_days
+                    WHERE ID_employee = @ID_employee";
+                return conn.Execute(sql, employee) > 0;
+            }
+        }
+
+        public bool DeleteEmployee(Employee employee)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+
+                string sql = @"
+                        DELETE FROM employees
+                        WHERE ID_employee = @ID_employee";
+                return conn.Execute(sql, employee) > 0;
+            }
+        }
 
 
 
