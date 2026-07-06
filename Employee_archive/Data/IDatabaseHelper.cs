@@ -31,6 +31,8 @@ namespace Employee_archive
 
         bool DeleteEmployee(Employee employee);
 
+        //Роли
+        List<Role> GetAllRoles();
 
         //Сортировка
         //List<Employee> GetSortedEmployees(string sortPar, string ascOrDesc);

@@ -116,7 +116,7 @@ namespace Employee_archive
                 conn.Open();
                 string sql = @"
                         INSERT INTO employees(Full_Name,Born_date,Phone,Role,Work_days) 
-                        VALUES (@Full_Name, @Dorn_date, @Phone, @Role, @Work_days)";
+                        VALUES (@Full_Name, @Born_date, @Phone, @Role, @Work_days)";
                 return conn.Execute(sql, employee) > 0;
             }
         }
@@ -153,6 +153,19 @@ namespace Employee_archive
         }
 
 
+        //Роли
+
+        public List<Role> GetAllRoles()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT * FROM Roles";
+
+                return conn.Query<Role>(sql).ToList();
+            }
+        }
+        
 
     }
 }

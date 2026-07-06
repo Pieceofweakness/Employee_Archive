@@ -63,5 +63,48 @@ namespace Employee_archive.Forms
             loginForm.ShowDialog();
             this.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddNewEmployeeForm addNewEmployeeForm = new AddNewEmployeeForm();
+            addNewEmployeeForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int selectedIdEmployee = (int)dgvEmployees.CurrentRow.Cells["ID"].Value;
+
+            var employee = new Employee
+            {
+                ID_employee = selectedIdEmployee
+            };
+
+            DialogResult result = MessageBox.Show(
+            $"Вы уверены, что хотите удалить сотрудника?\n\n" +
+            $"ФИО: {dgvEmployees.CurrentRow.Cells["Имя"].Value}\n" +
+            $"Должность: {dgvEmployees.CurrentRow.Cells["Роль"].Value}",
+            "Подтверждение удаления",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                bool res = db.DeleteEmployee(employee);
+
+                if (res)
+                {
+                    MessageBox.Show("УДАЛЕН");
+                }
+                else
+                {
+                    MessageBox.Show("Не получилось");
+                }
+            }
+
+            LoadEmployees();
+
+        }
     }
 }

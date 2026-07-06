@@ -34,3 +34,4 @@ D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debu
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.TestForm.resources
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Forms.LoginForm.resources
 D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Forms.MainForm.resources
+D:\Вуз\2 курс\Практика\Employee_Archive\Employee_archive\obj\Debug\Employee_archive.Forms.AddNewEmployeeForm.resources
