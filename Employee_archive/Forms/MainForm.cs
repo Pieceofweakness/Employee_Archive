@@ -20,14 +20,24 @@ namespace Employee_archive.Forms
             InitializeComponent();
             db = new DatabaseHelper();
             LoadEmployees();
+            LoadStatistics();
         }
 
+        //Загрузка статистики
+        public void LoadStatistics()
+        {
+            lbCountEmployees.Text = Convert.ToString( db.GetTotalEmployeesCount());
+            lbAVGDaysWork.Text = Convert.ToString(db.GetAverageWorkDays());
+        }
 
+        //Обновить таблицу
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadEmployees();
+            LoadStatistics();
         }
 
+        //Загрузка сотрудников
         public void LoadEmployees()
         {
             var employees = db.GetAllEmployees();
@@ -45,8 +55,10 @@ namespace Employee_archive.Forms
             dgvEmployees.DataSource = display;
 
             ConfigureSizeCollumns();
+            LoadStatistics();
         }
-
+        
+        //Настройка столбцов
         public void ConfigureSizeCollumns()
         {
             dgvEmployees.Columns["ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -83,25 +95,18 @@ namespace Employee_archive.Forms
                 ID_employee = selectedIdEmployee
             };
 
-            DialogResult result = MessageBox.Show(
-            $"Вы уверены, что хотите удалить сотрудника?\n\n" +
-            $"ФИО: {dgvEmployees.CurrentRow.Cells["Имя"].Value}\n" +
-            $"Должность: {dgvEmployees.CurrentRow.Cells["Роль"].Value}",
-            "Подтверждение удаления",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Вы уверены, что хотите удалить сотрудника?\n\nФИО: {dgvEmployees.CurrentRow.Cells["Имя"].Value}\nДолжность: {dgvEmployees.CurrentRow.Cells["Роль"].Value}", "Подтверждение удаления", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                bool res = db.DeleteEmployee(employee);
-
-                if (res)
+                try
                 {
-                    MessageBox.Show("УДАЛЕН");
+                    bool res = db.DeleteEmployee(employee);
+                    MessageBox.Show($"Сотрудник {employee.Full_Name} успешно удален");
                 }
-                else
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Не получилось");
+                    MessageBox.Show($"Не удалось удалить сотрудника: ошибка - {ex.Message}");
                 }
             }
 
@@ -174,7 +179,6 @@ namespace Employee_archive.Forms
             }
         }
 
-
         public void ExportToExcel(string filePath)
         {
             using (var workbook = new XLWorkbook())
@@ -197,7 +201,7 @@ namespace Employee_archive.Forms
                     worksheet.Cell(row, 2).Value = emp.Full_Name;
                     worksheet.Cell(row, 3).Value = emp.Born_date;
                     worksheet.Cell(row, 4).Value = emp.Phone;
-                    worksheet.Cell(row, 5).Value = emp.RoleName ?? "Без роли";
+                    worksheet.Cell(row, 5).Value = emp.RoleName;
                     worksheet.Cell(row, 6).Value = emp.Work_days;
                     row++;
                 }
@@ -206,5 +210,7 @@ namespace Employee_archive.Forms
                 workbook.SaveAs(filePath);
             }
         }
+
+
     }
 }

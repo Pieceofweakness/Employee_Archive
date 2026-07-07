@@ -27,15 +27,24 @@ namespace Employee_archive.Forms
             var admin = db.Authenticate(login, password);
             if(admin != null)
             {
-                MessageBox.Show($"ВХОД УСПЕШЕН " +
-                    $"Добро пожаловать:{admin.Full_Name}");
+                MessageBox.Show($"ВХОД УСПЕШЕН Добро пожаловать:{admin.Full_Name}");
                 this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+            }
 
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
         }
     }
 }

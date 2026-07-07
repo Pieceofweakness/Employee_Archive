@@ -30,6 +30,10 @@ namespace Employee_archive
         //Роли
         List<Role> GetAllRoles();
 
+        //Статистика
+        int GetTotalEmployeesCount();
+        double GetAverageWorkDays();
+
 
 
 

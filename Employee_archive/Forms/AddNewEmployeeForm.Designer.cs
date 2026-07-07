@@ -38,8 +38,9 @@
             this.txtBoxFIO = new System.Windows.Forms.TextBox();
             this.txtBoxBornDate = new System.Windows.Forms.TextBox();
             this.txtBoxPhone = new System.Windows.Forms.TextBox();
-            this.txtBoxWorkDays = new System.Windows.Forms.TextBox();
             this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.numDaysWork = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numDaysWork)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,13 +129,6 @@
             this.txtBoxPhone.Size = new System.Drawing.Size(182, 22);
             this.txtBoxPhone.TabIndex = 9;
             // 
-            // txtBoxWorkDays
-            // 
-            this.txtBoxWorkDays.Location = new System.Drawing.Point(144, 193);
-            this.txtBoxWorkDays.Name = "txtBoxWorkDays";
-            this.txtBoxWorkDays.Size = new System.Drawing.Size(111, 22);
-            this.txtBoxWorkDays.TabIndex = 10;
-            // 
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
@@ -143,13 +137,20 @@
             this.cmbRole.Size = new System.Drawing.Size(156, 24);
             this.cmbRole.TabIndex = 11;
             // 
+            // numDaysWork
+            // 
+            this.numDaysWork.Location = new System.Drawing.Point(144, 191);
+            this.numDaysWork.Name = "numDaysWork";
+            this.numDaysWork.Size = new System.Drawing.Size(120, 22);
+            this.numDaysWork.TabIndex = 12;
+            // 
             // AddNewEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 321);
+            this.ClientSize = new System.Drawing.Size(350, 321);
+            this.Controls.Add(this.numDaysWork);
             this.Controls.Add(this.cmbRole);
-            this.Controls.Add(this.txtBoxWorkDays);
             this.Controls.Add(this.txtBoxPhone);
             this.Controls.Add(this.txtBoxBornDate);
             this.Controls.Add(this.txtBoxFIO);
@@ -162,6 +163,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddNewEmployeeForm";
             this.Text = "AddNewEmployeeForm";
+            ((System.ComponentModel.ISupportInitialize)(this.numDaysWork)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +181,7 @@
         private System.Windows.Forms.TextBox txtBoxFIO;
         private System.Windows.Forms.TextBox txtBoxBornDate;
         private System.Windows.Forms.TextBox txtBoxPhone;
-        private System.Windows.Forms.TextBox txtBoxWorkDays;
         private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.NumericUpDown numDaysWork;
     }
 }

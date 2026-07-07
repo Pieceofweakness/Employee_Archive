@@ -36,11 +36,12 @@
             this.txtBoxFIO = new System.Windows.Forms.TextBox();
             this.txtBoxBornDate = new System.Windows.Forms.TextBox();
             this.txtBoxPhone = new System.Windows.Forms.TextBox();
-            this.txtBoxDaysWork = new System.Windows.Forms.TextBox();
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.numWorkDays = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -109,13 +110,6 @@
             this.txtBoxPhone.Size = new System.Drawing.Size(137, 22);
             this.txtBoxPhone.TabIndex = 7;
             // 
-            // txtBoxDaysWork
-            // 
-            this.txtBoxDaysWork.Location = new System.Drawing.Point(140, 187);
-            this.txtBoxDaysWork.Name = "txtBoxDaysWork";
-            this.txtBoxDaysWork.Size = new System.Drawing.Size(137, 22);
-            this.txtBoxDaysWork.TabIndex = 8;
-            // 
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
@@ -153,16 +147,23 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Формат: день-месяц-год";
             // 
+            // numWorkDays
+            // 
+            this.numWorkDays.Location = new System.Drawing.Point(140, 190);
+            this.numWorkDays.Name = "numWorkDays";
+            this.numWorkDays.Size = new System.Drawing.Size(120, 22);
+            this.numWorkDays.TabIndex = 13;
+            // 
             // EditEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 310);
+            this.Controls.Add(this.numWorkDays);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.cmbRole);
-            this.Controls.Add(this.txtBoxDaysWork);
             this.Controls.Add(this.txtBoxPhone);
             this.Controls.Add(this.txtBoxBornDate);
             this.Controls.Add(this.txtBoxFIO);
@@ -173,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EditEmployeeForm";
             this.Text = "EditEmployeeForm";
+            ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,10 +190,10 @@
         private System.Windows.Forms.TextBox txtBoxFIO;
         private System.Windows.Forms.TextBox txtBoxBornDate;
         private System.Windows.Forms.TextBox txtBoxPhone;
-        private System.Windows.Forms.TextBox txtBoxDaysWork;
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numWorkDays;
     }
 }

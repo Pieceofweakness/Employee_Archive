@@ -20,6 +20,8 @@ namespace Employee_archive.Forms
             db = new DatabaseHelper();
             LoadRoles();
         }
+
+        //Загрузка ролей
         public void LoadRoles()
         {
             var roles = db.GetAllRoles();
@@ -29,15 +31,38 @@ namespace Employee_archive.Forms
             cmbRole.ValueMember = "ID_Role";
         }
 
-
-
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtBoxFIO.Text))
+            {
+                MessageBox.Show("Введите ФИО сотрудника");
+                return;
+            }
+            if (cmbRole.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите должность");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBoxBornDate.Text))
+            {
+                MessageBox.Show("Введите дату рождения");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBoxPhone.Text))
+            {
+                MessageBox.Show("Введите номер телефона");
+                return;
+            }
+            if((int)numDaysWork.Value <= 0)
+            {
+                MessageBox.Show("Введите количество отработанных дней");
+                return;
+            }
             string fio = txtBoxFIO.Text.Trim();
             string bornDate = txtBoxBornDate.Text.Trim();
             string phone = txtBoxPhone.Text.Trim();
             int selectedRoleId = (int)cmbRole.SelectedValue;
-            int workDays =Convert.ToInt32( txtBoxWorkDays.Text.Trim());
+            int workDays = (int)numDaysWork.Value;
 
             var employee = new Employee
             {
@@ -49,14 +74,15 @@ namespace Employee_archive.Forms
                 
             };
 
-            bool result = db.AddEmployee(employee);
-            if (result)
+            try
             {
-                MessageBox.Show($"Новый сотрудник {fio} успешно добавлен");
+                bool result = db.AddEmployee(employee);
+                if(result)
+                MessageBox.Show($"Новый сотрудник {employee.Full_Name} успешно добавлен");
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Не удалось добавить сотудника");
+                MessageBox.Show($"Не удалось добавить сотрудника: ошибка - {ex.Message}");
             }
 
             this.Hide();

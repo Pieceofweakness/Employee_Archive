@@ -26,6 +26,7 @@ namespace Employee_archive.Forms
             
         }
 
+        //Загрузка ролей
         public void LoadRoles()
         {
             Roles = db.GetAllRoles();
@@ -35,12 +36,13 @@ namespace Employee_archive.Forms
             cmbRole.ValueMember = "ID_Role";
         }
 
+        //Загрузка данных сотрудника
         public void LoadEmployeeData()
         {
             txtBoxFIO.Text = CurrentEmployee.Full_Name;
             txtBoxBornDate.Text = CurrentEmployee.Born_date;
             txtBoxPhone.Text = CurrentEmployee.Phone;
-            txtBoxDaysWork.Text = Convert.ToString(CurrentEmployee.Work_days);
+            numWorkDays.Value = CurrentEmployee.Work_days;
 
             var role = Roles.Find(r => r.ID_Role == CurrentEmployee.Role);
             if (role != null)
@@ -51,11 +53,37 @@ namespace Employee_archive.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtBoxFIO.Text))
+            {
+                MessageBox.Show("Введите ФИО сотрудника");
+                return;
+            }
+            if (cmbRole.SelectedItem == null)
+            {
+                MessageBox.Show("Выберите должность");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBoxBornDate.Text))
+            {
+                MessageBox.Show("Введите дату рождения");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtBoxPhone.Text))
+            {
+                MessageBox.Show("Введите номер телефона");
+                return;
+            }
+            if ((int)numWorkDays.Value <= 0)
+            {
+                MessageBox.Show("Введите количество отработанных дней");
+                return;
+            }
+
             string fio = txtBoxFIO.Text.Trim();
             string bornDate = txtBoxBornDate.Text.Trim();
             string phone = txtBoxPhone.Text.Trim();
             int selectedRoleId = (int)cmbRole.SelectedValue;
-            int workDays = Convert.ToInt32(txtBoxDaysWork.Text.Trim());
+            int workDays = (int)numWorkDays.Value;
 
 
             CurrentEmployee.Full_Name = fio;
@@ -64,22 +92,23 @@ namespace Employee_archive.Forms
             CurrentEmployee.Role = selectedRoleId;
             CurrentEmployee.Work_days= workDays;
 
-            bool result = db.UpdateEmployee(CurrentEmployee);
-            if (result)
+            try
             {
-                MessageBox.Show($"Данные сотрудника {fio} успешно изменены");
+                bool result = db.UpdateEmployee(CurrentEmployee);
+                if (result)
+                {
+                    MessageBox.Show($"Данные сотрудника {CurrentEmployee.Full_Name} успешно изменены");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Не удалось изменить данные сотрудника");
+                MessageBox.Show($"Не удалось изменить данные сотрудника: ошибка - {ex.Message}");
             }
 
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
             this.Close();
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|d:\\\u0432\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\employee_archive\\employee_archive\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|d:\\\u0432\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\employee_archive\\employee_archive\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|d:\\\u0432\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\employee_archive\\employee_archive\\forms\\editemployeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|solutionrelative:forms\\editemployeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\data\\idatabasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|solutionrelative:data\\idatabasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45542876-07EB-4F57-8E46-E30D76D780A3}|Employee_archive.csproj|solutionrelative:data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,9 +32,9 @@
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
               "ToolTip": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Forms\\MainForm.cs",
               "RelativeToolTip": "Forms\\MainForm.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAcwJ0AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T16:08:01.918Z",
+              "WhenOpened": "2026-07-07T17:56:53.309Z",
               "EditorCaption": ""
             },
             {
@@ -58,47 +46,8 @@
               "ToolTip": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Forms\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T16:45:35.845Z",
+              "WhenOpened": "2026-07-07T17:55:15.995Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditEmployeeForm.cs",
-              "DocumentMoniker": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Forms\\EditEmployeeForm.cs",
-              "RelativeDocumentMoniker": "Forms\\EditEmployeeForm.cs",
-              "ToolTip": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Forms\\EditEmployeeForm.cs",
-              "RelativeToolTip": "Forms\\EditEmployeeForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T15:12:58.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDatabaseHelper.cs",
-              "DocumentMoniker": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Data\\IDatabaseHelper.cs",
-              "RelativeDocumentMoniker": "Data\\IDatabaseHelper.cs",
-              "ToolTip": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Data\\IDatabaseHelper.cs",
-              "RelativeToolTip": "Data\\IDatabaseHelper.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T14:32:44.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Data\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "Data\\DatabaseHelper.cs",
-              "ToolTip": "D:\\\u0412\u0443\u0437\\2 \u043A\u0443\u0440\u0441\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\Employee_Archive\\Employee_archive\\Data\\DatabaseHelper.cs",
-              "RelativeToolTip": "Data\\DatabaseHelper.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAcwJoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T14:39:05.924Z",
-              "EditorCaption": ""
             }
           ]
         }

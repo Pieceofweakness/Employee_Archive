@@ -35,6 +35,11 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnExportToExcel = new System.Windows.Forms.Button();
+            this.lbCountEmployees = new System.Windows.Forms.Label();
+            this.lbAVGDaysWork = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +60,7 @@
             // 
             this.btnAdd.Location = new System.Drawing.Point(12, 265);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(101, 46);
+            this.btnAdd.Size = new System.Drawing.Size(117, 46);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -63,7 +68,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(144, 265);
+            this.btnUpdate.Location = new System.Drawing.Point(149, 265);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(155, 46);
             this.btnUpdate.TabIndex = 2;
@@ -73,7 +78,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(329, 265);
+            this.btnDelete.Location = new System.Drawing.Point(12, 317);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(117, 46);
             this.btnDelete.TabIndex = 3;
@@ -83,9 +88,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(483, 265);
+            this.btnRefresh.Location = new System.Drawing.Point(165, 317);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(122, 46);
+            this.btnRefresh.Size = new System.Drawing.Size(119, 46);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Обновить";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -111,11 +116,61 @@
             this.btnExportToExcel.UseVisualStyleBackColor = true;
             this.btnExportToExcel.Click += new System.EventHandler(this.btnExportToExcel_Click);
             // 
+            // lbCountEmployees
+            // 
+            this.lbCountEmployees.AutoSize = true;
+            this.lbCountEmployees.Location = new System.Drawing.Point(493, 317);
+            this.lbCountEmployees.Name = "lbCountEmployees";
+            this.lbCountEmployees.Size = new System.Drawing.Size(44, 16);
+            this.lbCountEmployees.TabIndex = 9;
+            this.lbCountEmployees.Text = "label1";
+            // 
+            // lbAVGDaysWork
+            // 
+            this.lbAVGDaysWork.AutoSize = true;
+            this.lbAVGDaysWork.Location = new System.Drawing.Point(493, 377);
+            this.lbAVGDaysWork.Name = "lbAVGDaysWork";
+            this.lbAVGDaysWork.Size = new System.Drawing.Size(44, 16);
+            this.lbAVGDaysWork.TabIndex = 10;
+            this.lbAVGDaysWork.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(472, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Статистика";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(432, 287);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Количество сотрудников";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(384, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(275, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Среднее количество отработанных дней";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1009, 404);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbAVGDaysWork);
+            this.Controls.Add(this.lbCountEmployees);
             this.Controls.Add(this.btnExportToExcel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRefresh);
@@ -127,6 +182,7 @@
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -139,5 +195,10 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnExportToExcel;
+        private System.Windows.Forms.Label lbCountEmployees;
+        private System.Windows.Forms.Label lbAVGDaysWork;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -23,7 +23,6 @@ namespace Employee_archive
         {
             return new NpgsqlConnection(connectionString);
         }
-
         public bool TestConnection()
         {
             try
@@ -39,7 +38,6 @@ namespace Employee_archive
                 return false;
             }
         }
-
         public DataTable QueryTable(string sql, object param = null)
         {
             using (var conn = GetConnection())
@@ -154,7 +152,6 @@ namespace Employee_archive
 
         
         //Роли
-
         public List<Role> GetAllRoles()
         {
             using (var conn = GetConnection())
@@ -165,7 +162,28 @@ namespace Employee_archive
                 return conn.Query<Role>(sql).ToList();
             }
         }
-        
+
+        //Статистика
+        public int GetTotalEmployeesCount()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM employees";
+                return conn.ExecuteScalar<int>(sql);
+            }
+        }
+        public double GetAverageWorkDays()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT AVG(Work_days) FROM employees";
+                var result = conn.ExecuteScalar<double>(sql);
+                return result;
+            }
+        }
+
 
     }
 }
