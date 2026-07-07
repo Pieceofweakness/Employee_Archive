@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+using System.IO;
 
 namespace Employee_archive.Forms
 {
@@ -146,6 +148,63 @@ namespace Employee_archive.Forms
             this.Close();
 
 
+        }
+
+        private void btnExportToExcel_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Title = "Сохранить Excel файл";
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.FileName = $"Сотрудники_{DateTime.Now:dd-MM-yyyy}";
+                saveFileDialog.RestoreDirectory = true;
+
+                if (saveFileDialog.ShowDialog() != DialogResult.OK)
+                    return;
+
+                try
+                {
+                    ExportToExcel(saveFileDialog.FileName);
+                    MessageBox.Show($"Данные успешно испортированы в - {saveFileDialog.FileName}");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Ошибка - {ex.Message}");
+                }
+            }
+        }
+
+
+        public void ExportToExcel(string filePath)
+        {
+            using (var workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("Сотрудники");
+                var employees = db.GetAllEmployees();
+
+                worksheet.Cell(1, 1).Value = "ID";
+                worksheet.Cell(1, 2).Value = "ФИО";
+                worksheet.Cell(1, 3).Value = "Дата рождения";
+                worksheet.Cell(1, 4).Value = "Телефон";
+                worksheet.Cell(1, 5).Value = "Роль";
+                worksheet.Cell(1, 6).Value = "Отработано дней";
+
+                
+                int row = 2;
+                foreach (var emp in employees)
+                {
+                    worksheet.Cell(row, 1).Value = emp.ID_employee;
+                    worksheet.Cell(row, 2).Value = emp.Full_Name;
+                    worksheet.Cell(row, 3).Value = emp.Born_date;
+                    worksheet.Cell(row, 4).Value = emp.Phone;
+                    worksheet.Cell(row, 5).Value = emp.RoleName ?? "Без роли";
+                    worksheet.Cell(row, 6).Value = emp.Work_days;
+                    row++;
+                }
+
+                worksheet.Columns().AdjustToContents();
+                workbook.SaveAs(filePath);
+            }
         }
     }
 }
