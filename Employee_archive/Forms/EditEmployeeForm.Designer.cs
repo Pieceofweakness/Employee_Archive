@@ -41,88 +41,95 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.numWorkDays = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(56, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "ФИО";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 79);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.Location = new System.Drawing.Point(12, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 16);
+            this.label2.Size = new System.Drawing.Size(168, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Дата Рождения";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 118);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.Location = new System.Drawing.Point(12, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(100, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "Телефон";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 153);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Location = new System.Drawing.Point(12, 217);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.Size = new System.Drawing.Size(58, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Роль";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 190);
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.Location = new System.Drawing.Point(12, 266);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 16);
+            this.label5.Size = new System.Drawing.Size(194, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Отработано дней";
             // 
             // txtBoxFIO
             // 
-            this.txtBoxFIO.Location = new System.Drawing.Point(140, 21);
+            this.txtBoxFIO.Location = new System.Drawing.Point(74, 12);
             this.txtBoxFIO.Name = "txtBoxFIO";
-            this.txtBoxFIO.Size = new System.Drawing.Size(204, 22);
+            this.txtBoxFIO.Size = new System.Drawing.Size(295, 22);
             this.txtBoxFIO.TabIndex = 5;
             // 
             // txtBoxBornDate
             // 
-            this.txtBoxBornDate.Location = new System.Drawing.Point(140, 76);
+            this.txtBoxBornDate.Location = new System.Drawing.Point(186, 58);
             this.txtBoxBornDate.Name = "txtBoxBornDate";
-            this.txtBoxBornDate.Size = new System.Drawing.Size(137, 22);
+            this.txtBoxBornDate.Size = new System.Drawing.Size(183, 22);
             this.txtBoxBornDate.TabIndex = 6;
             // 
             // txtBoxPhone
             // 
-            this.txtBoxPhone.Location = new System.Drawing.Point(140, 115);
+            this.txtBoxPhone.Location = new System.Drawing.Point(118, 137);
             this.txtBoxPhone.Name = "txtBoxPhone";
-            this.txtBoxPhone.Size = new System.Drawing.Size(137, 22);
+            this.txtBoxPhone.Size = new System.Drawing.Size(251, 22);
             this.txtBoxPhone.TabIndex = 7;
             // 
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(140, 150);
+            this.cmbRole.Location = new System.Drawing.Point(76, 222);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(158, 24);
+            this.cmbRole.Size = new System.Drawing.Size(293, 24);
             this.cmbRole.TabIndex = 9;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(40, 252);
+            this.btnUpdate.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnUpdate.Location = new System.Drawing.Point(32, 327);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(111, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(132, 57);
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Сохранить";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -130,9 +137,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(193, 252);
+            this.btnCancel.Font = new System.Drawing.Font("Comic Sans MS", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnCancel.Location = new System.Drawing.Point(222, 327);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(117, 43);
+            this.btnCancel.Size = new System.Drawing.Size(132, 57);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Отмена";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -141,24 +149,42 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 57);
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.Location = new System.Drawing.Point(148, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 16);
+            this.label6.Size = new System.Drawing.Size(185, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Формат: день-месяц-год";
             // 
             // numWorkDays
             // 
-            this.numWorkDays.Location = new System.Drawing.Point(140, 190);
+            this.numWorkDays.Location = new System.Drawing.Point(213, 274);
+            this.numWorkDays.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.numWorkDays.Name = "numWorkDays";
-            this.numWorkDays.Size = new System.Drawing.Size(120, 22);
+            this.numWorkDays.Size = new System.Drawing.Size(156, 22);
             this.numWorkDays.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label7.Location = new System.Drawing.Point(123, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(231, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Формат: +7 (ХХХ) ХХХ-ХХ-ХХ";
             // 
             // EditEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 310);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(381, 403);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.numWorkDays);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancel);
@@ -173,7 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditEmployeeForm";
-            this.Text = "EditEmployeeForm";
+            this.Text = "Редактирование ";
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,5 +221,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numWorkDays;
+        private System.Windows.Forms.Label label7;
     }
 }

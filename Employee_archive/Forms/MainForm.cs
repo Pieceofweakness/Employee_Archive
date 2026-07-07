@@ -27,7 +27,9 @@ namespace Employee_archive.Forms
         public void LoadStatistics()
         {
             lbCountEmployees.Text = Convert.ToString( db.GetTotalEmployeesCount());
-            lbAVGDaysWork.Text = Convert.ToString(db.GetAverageWorkDays());
+            double avgDays = db.GetAverageWorkDays();
+            lbAVGDaysWork.Text = avgDays.ToString("F1");
+
         }
 
         //Обновить таблицу

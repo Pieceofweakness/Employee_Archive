@@ -38,26 +38,7 @@ namespace Employee_archive
                 return false;
             }
         }
-        public DataTable QueryTable(string sql, object param = null)
-        {
-            using (var conn = GetConnection())
-            {
-                conn.Open();
-                var result = conn.Query(sql, param);
-                DataTable table = new DataTable();
-
-                if (result.Any())
-                {
-                    var firstRow = (IDictionary<string, object>)result.First();
-                    foreach (var prop in firstRow.Keys)
-                        table.Columns.Add(prop);
-
-                    foreach (IDictionary<string, object> row in result)
-                        table.Rows.Add(row.Values.ToArray());
-                }
-                return table;
-            }
-        }
+        
         public int Execute(string sql, object param = null)
         {
             using (var conn = GetConnection())

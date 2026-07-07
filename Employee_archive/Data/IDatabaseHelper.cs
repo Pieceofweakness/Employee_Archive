@@ -14,7 +14,6 @@ namespace Employee_archive
 
 
         //Запросы
-        DataTable QueryTable(string sql, object param = null);
         int Execute(string sql, object param = null);
 
 
