@@ -14,28 +14,22 @@ namespace Employee_archive
 
 
         //Запросы
-
         DataTable QueryTable(string sql, object param = null);
-
         int Execute(string sql, object param = null);
 
 
         //Авторизация
         Administrator Authenticate(string login, string password);
 
-
         //CRUD над сотрудниками
         List<Employee> GetAllEmployees();
         bool AddEmployee(Employee employee);
         bool UpdateEmployee(Employee employee);
-
         bool DeleteEmployee(Employee employee);
 
         //Роли
         List<Role> GetAllRoles();
 
-        //Сортировка
-        //List<Employee> GetSortedEmployees(string sortPar, string ascOrDesc);
 
 
 

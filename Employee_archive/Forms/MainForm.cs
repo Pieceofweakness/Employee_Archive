@@ -106,5 +106,46 @@ namespace Employee_archive.Forms
             LoadEmployees();
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(dgvEmployees.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите работника");
+                return;
+            }
+
+            DataGridViewRow selectedRow = dgvEmployees.SelectedRows.Count > 0 ? dgvEmployees.SelectedRows[0] : dgvEmployees.CurrentRow;
+
+            int employeeId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+            string fullName = selectedRow.Cells["Имя"].Value.ToString();
+            string bornDate = selectedRow.Cells["Дата_Рождения"].Value.ToString();
+            string phone = selectedRow.Cells["Телефон"].Value.ToString();
+            string roleName = selectedRow.Cells["Роль"].Value.ToString();
+            int workDays = Convert.ToInt32(selectedRow.Cells["Отработано_Дней"].Value);
+
+
+            var roles = db.GetAllRoles();
+            var role = roles.FirstOrDefault(r => r.Name_Role == roleName);
+            int roleId = role.ID_Role;
+
+            var employee = new Employee
+            {
+                ID_employee = employeeId,
+                Full_Name = fullName,
+                Born_date = bornDate,
+                Phone = phone,
+                Role = roleId,
+                RoleName = roleName,
+                Work_days = workDays
+            };
+
+            this.Hide();
+            EditEmployeeForm editEmployeeForm = new EditEmployeeForm(employee);
+            editEmployeeForm.ShowDialog();
+            this.Close();
+
+
+        }
     }
 }
