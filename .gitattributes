@@ -4,3 +4,5 @@
 
 obj/** linguist-vendored
 bin/** linguist-vendored
+
+.html linguist-language=HTML
