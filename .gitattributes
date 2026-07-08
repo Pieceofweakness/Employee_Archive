@@ -1,0 +1,6 @@
+*.resx linguist-language=XML
+*.resources linguist-language=XML
+*.config linguist-language=XML
+
+obj/** linguist-vendored
+bin/** linguist-vendored
