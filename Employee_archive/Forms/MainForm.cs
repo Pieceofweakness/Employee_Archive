@@ -195,7 +195,6 @@ namespace Employee_archive.Forms
                 worksheet.Cell(1, 5).Value = "Роль";
                 worksheet.Cell(1, 6).Value = "Отработано дней";
 
-                
                 int row = 2;
                 foreach (var emp in employees)
                 {

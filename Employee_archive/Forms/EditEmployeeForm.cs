@@ -78,14 +78,11 @@ namespace Employee_archive.Forms
                 MessageBox.Show("Введите количество отработанных дней");
                 return;
             }
-
             string fio = txtBoxFIO.Text.Trim();
             string bornDate = txtBoxBornDate.Text.Trim();
             string phone = txtBoxPhone.Text.Trim();
             int selectedRoleId = (int)cmbRole.SelectedValue;
             int workDays = (int)numWorkDays.Value;
-
-
             CurrentEmployee.Full_Name = fio;
             CurrentEmployee.Born_date = bornDate;
             CurrentEmployee.Phone = phone;
